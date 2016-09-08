@@ -1,0 +1,24 @@
+RewriteBase /
+RewriteEngine On
+#RewriteRule ^vendor/(.*)?$ / [F,L]
+#RewriteRule ^storage/(.*)?$ / [F,L]
+#RewriteRule ^config.php$ / [F,L]
+
+RewriteCond "%{REQUEST_URI}" "!=/api.php"
+RewriteRule ^/data1/www/htdocs/371/springcloudbbs/1/api(.*)$ api.php [QSA,L]
+RewriteCond "%{REQUEST_URI}" "!=/admin.php"
+RewriteRule ^/data1/www/htdocs/371/springcloudbbs/1/admin(.*)$ admin.php [QSA,L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond "%{REQUEST_URI}" "!=/index.php"
+RewriteRule !^/data1/www/htdocs/371/springcloudbbs/1/assets index.php [QSA,L]
+
+
+
+#RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteCond "%{REQUEST_URI}" "!=/api.php"
+#RewriteRule ^/data1/www/htdocs/371/springcloudbbs/1/api(.*)$ /api.php [L,QSA]
+#RewriteCond "%{REQUEST_URI}" "!=/admin.php"
+#RewriteRule ^/data1/www/htdocs/371/springcloudbbs/1/admin(.*)$ /admin.php [L,QSA]
