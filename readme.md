@@ -1,3 +1,13 @@
+## For Sina SAE
+1. 已经安装好所有PHP依赖
+2. 修改了初始化模块，增加数据库端口做为初始化参数
+3. 修改了注册模块，注册用户不再需要认证邮件
+4. 设置了SAE下的rewrite规则
+5. 将谷歌CDN字体资源依赖改为国内某CDN地址
+6. 预设了中文语言包
+7. 使用目前官方最新的版本v0.1.0-beta5
+8. 根据官方版本不定期升级本项目（目前bug实在太多了）
+
 ![Flarum](http://flarum.org/img/logo.png)
 
 **[Flarum](http://flarum.org) is free, open-source forum software** built with PHP and [Mithril.js](http://mithril.js.org). It is:
